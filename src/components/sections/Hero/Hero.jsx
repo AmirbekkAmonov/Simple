@@ -127,7 +127,7 @@ function Hero() {
                 <Content>
                     <Circle1></Circle1>
                     <Circle2></Circle2>
-                    <img src="./assets/images/Illustration.png" alt="" />
+                    <img src="./assets/images/Illustration.webp" alt="" />
                     <Video>
                         <img src="./assets/icons/video.svg" alt="" />
                         Watch the full video 2 min
