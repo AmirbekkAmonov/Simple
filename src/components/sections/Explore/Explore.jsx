@@ -29,7 +29,7 @@ const Section = styled.section`
     }
     position: relative;
     margin-top: 70px;
-    padding: 80px 0 20px 0;   
+    padding: 80px 10px 20px 10px;   
     background: linear-gradient(180deg, #FBFBFB 0%, #FBFBFB 100%);
 
 `
@@ -82,7 +82,7 @@ const Text = styled.div`
 
     h2{
         font-weight: 700;
-        font-size: 32px;
+        font-size: 30px;
         line-height: 42px;
         letter-spacing: -0.25px;
         color: #191919;

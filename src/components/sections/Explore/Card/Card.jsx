@@ -24,7 +24,7 @@ const Card_content = styled.div`
         gap: 4px;
         h3{
             font-weight: 700;
-            font-size: 24px;
+            font-size: 22px;
             line-height: 34px;
             letter-spacing: -0.25px;
             color: #191919;
