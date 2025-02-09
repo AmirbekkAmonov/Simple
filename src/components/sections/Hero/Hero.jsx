@@ -13,7 +13,29 @@ const H2 = styled.h2`
     font-size: 84px;
     line-height: 77px;
     text-align: center;
-      color: ${(props) => (props.$black ? "#191919" : "transparent")};
+    color: ${(props) => (props.$black ? "#191919" : "transparent")};
+
+    @media (max-width: 850px) {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    @media (max-width: 680px) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+        @media (max-width: 570px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+            @media (max-width: 490px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
+                @media (max-width: 380px) {
+                    font-size: 30px;
+                    line-height: 30px;
+                }
 
       span {    
        background: linear-gradient(50.9deg, #338CF5 4.9%, #4FD1C5 94.23%);
@@ -32,12 +54,32 @@ const P = styled.p`
     letter-spacing: -0.25px;
     text-align: center;
     color: #666666;
+
+    @media (max-width: 850px) {
+        width: 80%;
+    }
+        @media (max-width: 680px) {
+            width: 90%;
+            font-size: 16px;
+            line-height: 24px;
+        }
+            @media (max-width: 570px) { 
+                width: 98%;
+                font-size: 14px;
+                line-height: 22px;
+            }
 `
 const Btn = styled.div`
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     gap: 20px;
+    @media (max-width: 350px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 const Hero_btn = styled.button`
     background: linear-gradient(50.9deg, #338CF5 4.9%, #4FD1C5 94.23%);
@@ -53,6 +95,14 @@ const Hero_btn = styled.button`
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
     z-index: 2;
+
+    @media (max-width: 570px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+        @media (max-width: 350px) {
+            width: 80%;
+        }
 `
 const Content = styled.div`
     position: relative;
@@ -64,6 +114,15 @@ const Content = styled.div`
         width: 62%;
         height: auto;
         z-index: 1;
+        @media (max-width: 900px) {
+            width: 70%;
+        }
+            @media (max-width: 770px) {
+                width: 80%;
+            }
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
     }
 `
 const Circle1 = styled.div`
@@ -74,6 +133,10 @@ const Circle1 = styled.div`
     height: 250px;
     border-radius: 50%;
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 77.4%, #DFDFDF 100%);
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 `
 const Circle2 = styled.div`
     position: absolute;
@@ -83,6 +146,10 @@ const Circle2 = styled.div`
     height: 120px;
     border-radius: 50%;
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 77.4%, #DFDFDF 100%);
+
+    @media (max-width: 600px) {
+        display: none;
+    }
 `
 const Video = styled.div`
     position: absolute;
@@ -103,10 +170,31 @@ const Video = styled.div`
     cursor: pointer;
     box-shadow: 0px 10px 15px -3px #19202C29;
 
+    @media (max-width: 900px) {
+        padding: 12px 16px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+        @media (max-width: 450px) {
+            font-size: 12px;
+            line-height: 16px;
+            padding: 8px 12px;
+        }
+
 
     img {
         width: 24px;
         height: 24px;
+
+        @media (max-width: 900px) {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 450px) {
+            width: 16px;            
+            height: 16px;
+        }
     }
 `
 
