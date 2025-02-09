@@ -51,6 +51,15 @@ const H2 = styled.h2`
     letter-spacing: -0.5px;
     text-align: center;
     color: #191919;
+
+    @media (max-width: 600px) {
+        font-size: 36px;
+        line-height: 46px;
+    }
+        @media (max-width: 450px) {
+            font-size: 28px;
+            line-height: 38px;
+        }
 `
 const P2 = styled.p`
     width: 60%;
@@ -60,6 +69,18 @@ const P2 = styled.p`
     letter-spacing: -0.25px;
     text-align: center;
     color: #666666;
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+        @media (max-width: 600px) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @media (max-width: 450px) {
+            font-size: 16px;
+            line-height: 26px;
+        }
 `
 const Content = styled.div`
     width: 100%;
@@ -70,6 +91,10 @@ const Content = styled.div`
     text-align: start;
     justify-content: space-between;
     gap: 20px;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
 `
 const Text = styled.div`
     width: calc(50% - 40px);
@@ -80,12 +105,29 @@ const Text = styled.div`
     text-align: left;
     gap: 20px;
 
+    @media (max-width: 850px) {
+        width: calc(50% - 20px);
+    }
+        @media (max-width: 750px) {
+        width: 100%;
+        gap: 10px;
+    }
+
     h2{
         font-weight: 700;
         font-size: 30px;
         line-height: 42px;
         letter-spacing: -0.25px;
         color: #191919;
+
+        @media (max-width: 1000px) {
+            font-size: 26px;
+            line-height: 36px;
+        }
+            @media (max-width: 450px) {
+                font-size: 22px;
+                line-height: 32px;
+            }
     }
     p{
         font-weight: 400;
@@ -93,18 +135,33 @@ const Text = styled.div`
         line-height: 30px;
         letter-spacing: -0.25px;
         color: #666666;
+
+        @media (max-width: 1000px) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+            @media (max-width: 450px) {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
     }
     .cards{
         width: 100%;
         display:flex;
         flex-direction: column;
         gap: 20px;
-
     }
 `
 const Img = styled.div` 
     position: relative;
     width: calc(50% - 40px);
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+        @media (max-width: 340px) {
+            display: none;
+        }
 
     .Code{
         padding: 20px;
@@ -152,6 +209,11 @@ const Img = styled.div`
             letter-spacing: 0px;
             color: #999999;
 
+            @media (max-width: 390px) {
+                font-size: 12px;
+                line-height: 20px;
+            }
+
             strong{
                 color: #ffffff99;
             }
@@ -163,6 +225,28 @@ const Img = styled.div`
         left: 20px;
         width: 80%;
         height: auto;
+
+        @media (max-width: 1100px) {
+            bottom: -60px;
+        }
+            @media (max-width: 850px) {
+            bottom: -40px;
+            width: 95%;
+            }
+                @media (max-width: 750px) {
+                    width: 70%;
+                    bottom: -100px;
+                }
+                    @media (max-width: 660px) {
+                        bottom: -50px;
+                    }
+                        @media (max-width: 550px) {
+                            width: 95%;
+                            bottom: -70px;
+                        }
+                            @media (max-width: 390px) {
+                                bottom: -40px;
+                            }
     }
 `
 

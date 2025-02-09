@@ -13,6 +13,12 @@ const Card_content = styled.div`
     border: 1px solid #EAEAEA;
     transition: all 0.3s;
 
+    @media (max-width: 450px) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
     &:hover{
         box-shadow: 0px 1px 3px 0px #19191929;
         background-color: #EAEAEA;
@@ -28,6 +34,15 @@ const Card_content = styled.div`
             line-height: 34px;
             letter-spacing: -0.25px;
             color: #191919;
+
+            @media (max-width: 1000px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+                @media (max-width: 350px) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
         }
         p{
             font-weight: 400;
@@ -35,6 +50,13 @@ const Card_content = styled.div`
             line-height: 24px;
             letter-spacing: -0.25px;
             color: #666666;
+
+            @media (max-width: 1000px) {
+                font-size: 14px;        
+            }
+                @media (max-width: 350px) {
+                    font-size: 12px;
+                }
         }
     }
     button{
