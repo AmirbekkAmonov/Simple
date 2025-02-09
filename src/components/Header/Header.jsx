@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 
 const Header2 = styled.header`
   padding: 20px 0;
@@ -45,16 +47,47 @@ const Button = styled.button`
         color: ${(props) => (props.$rang ? "#191919" : "#EFEFEF")};
     }
 `;
+const BackButton = styled(Button)`
+  padding: 5px 10px;
+  background: transparent;
+  color: #666666;
+  border: 1px solid #666666;
+  &:hover {
+    background: #ecebeb;
+    color: #191919;
+  }
+`;
 function Header() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const isAuthPage = location.pathname === "/signin" || location.pathname === "/signup";
+
     return (
         <Header2>
             <div className="container">
                 <Padding>
-                    <a href="#"><Circle></Circle></a>
-                    <Register>
-                        <Button $rang>Sign in</Button>
-                        <Button>Sign up <img src="./assets/icons/Path.svg" alt="" /></Button>
-                    </Register>
+                    {isAuthPage ? (
+                        <BackButton onClick={() => navigate("/")}>
+                            ⬅ Back
+                        </BackButton>
+                    ) : (
+                        <Link to="/">
+                            <Circle />
+                        </Link>
+                    )}
+
+                    {!isAuthPage && (
+                        <Register>
+                            <Link to="/signin">
+                                <Button $rang>Sign In</Button>
+                            </Link>
+                            <Link to="/signup">
+                                <Button>
+                                    Sign Up <img src="./assets/icons/Path.svg" alt="Arrow" />
+                                </Button>
+                            </Link>
+                        </Register>
+                    )}
                 </Padding>
             </div>
         </Header2>
