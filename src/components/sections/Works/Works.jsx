@@ -27,6 +27,15 @@ const Section = styled.section`
         letter-spacing: -0.5px;
         text-align: center;
         color: #191919;
+        @media (max-width: 600px) {
+            font-size: 36px;
+            line-height: 46px;
+        }
+
+        @media (max-width: 320px) {
+            font-size: 28px;
+            line-height: 42px;
+        }
     }
     .p{
         width: 60%;
@@ -36,6 +45,17 @@ const Section = styled.section`
         letter-spacing: -0.25px;
         text-align: center;
         color: #666666;
+        @media (max-width: 600px) {
+            width: 80%;
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        @media (max-width: 320px) {
+            width: 90%;
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     .cards{
         margin-top: 68px;
@@ -47,6 +67,18 @@ const Section = styled.section`
         text-align: center;
         gap: 24px;
         padding: 0 40px 70px 40px;
+
+        @media (max-width: 820px) { 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        @media (max-width: 710px) { 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        @media (max-width: 300px) { 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
     }
 
      &::after {
@@ -58,6 +90,10 @@ const Section = styled.section`
     height: 50%; 
     background-color: #191919;
     z-index: -1; 
+
+    @media (max-width: 1100px) { 
+        height: 60%; 
+    }
   }
 `
 

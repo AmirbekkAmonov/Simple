@@ -31,6 +31,11 @@ const Cards = styled.div`
       letter-spacing: -0.25px;
       text-align: center;
       color: #191919;
+
+      @media (max-width: 300px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
     p{
       widht: 100%;
@@ -40,6 +45,11 @@ const Cards = styled.div`
       letter-spacing: -0.25px;
       text-align: center;
       color: #666666;
+
+      @media (max-width: 300px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
     &:hover{
       box-shadow: 0px 1px 9px 0px #EAEAEA;
