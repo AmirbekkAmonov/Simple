@@ -4,6 +4,13 @@ const Section = styled.section`
     overflow: hidden;
     position: relative;
     padding: 80px 100px;
+
+    @media (max-width: 850px) {
+        padding: 80px 80px;
+    }
+        @media (max-width: 780px) {
+            padding: 80px 20px;
+        }
     .container{
         display: flex;
         flex-direction: column;
@@ -19,6 +26,7 @@ const Section = styled.section`
             left: 50%;
             transform: translateX(-50%) rotate(90deg);
             background-color: #EAEAEA;
+            z-index: 10;
         }
     h2{
         width: 65%;    
@@ -28,6 +36,17 @@ const Section = styled.section`
         letter-spacing: -0.5px;
         text-align: center;
         color: #191919;
+        @media (max-width: 1100px) {
+            width: 100%;
+        }
+            @media (max-width: 600px) {
+                font-size: 32px;
+                line-height: 42px;
+            }
+                @media (max-width: 350px) {
+                    font-size: 28px;
+                    line-height: 36px;
+                }
     }
     .p{
         width: 65%;
@@ -37,6 +56,17 @@ const Section = styled.section`
         letter-spacing: -0.25px;
         text-align: center;
         color: #666666;
+        @media (max-width: 940px) {
+            width: 100%;
+        }
+            @media (max-width: 600px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+                @media (max-width: 350px) {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
     }
 `
 const Image = styled.div`
@@ -46,6 +76,10 @@ const Image = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @media (max-width: 680px) {
+        flex-wrap: wrap;
+    }
 
     img{
         width: 120px;
@@ -86,7 +120,12 @@ const User = styled.div`
     padding: 84px 52px 34px 52px;
     border-radius: 5px;
     border: 2px solid #EAEAEA;
-
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+        @media (max-width: 660px) {
+            padding: 84px 20px 34px 20px;
+        }
     .users_img{
         position: absolute;
         top: -18%;
@@ -118,6 +157,11 @@ const User = styled.div`
         letter-spacing: -0.25px;
         text-align: center;
         color: #191919;
+
+        @media (max-width: 500px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     b{
         margin-top: 12px;
@@ -146,6 +190,10 @@ const Cricle = styled.div`
     height: 250px;
     border-radius: 50%;
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 77.4%, #DFDFDF 100%);
+
+    @media (max-width: 500px) { 
+        display: none;
+    }
 `
 
 function World() {
