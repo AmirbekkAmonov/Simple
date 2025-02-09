@@ -20,6 +20,23 @@ const Container = styled.div`
       letter-spacing: -0.5px;
       text-align: center;
       color: #191919;
+
+      @media (max-width: 970px) {
+        font-size: 36px;
+        line-height: 38px;
+        width: 70%;
+      }
+
+      @media (max-width: 840px) {
+        font-size: 32px;
+        line-height: 36px;
+        width: 80%;
+      }
+        @media (max-width: 600px) {
+        font-size: 24px;
+        line-height: 28px;
+        width: 100%;
+      }
   }
 `;
 
