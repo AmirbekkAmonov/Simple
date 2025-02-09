@@ -7,8 +7,11 @@ const Section = styled.section`
   width: 100%;
   margin: 0 auto;
   padding: 0 80px 80px 80px;
+
+  @media (max-width: 600px) {
+    padding: 0 20px 80px 20px;
+  }
   .container {
-    // margin: 0 80px;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -16,11 +19,41 @@ const Section = styled.section`
     gap: 16px;
     background-color: #191919;
     border-radius: 5px;
+    @media (max-width: 1100px) {
+        height: 385px;
+    }
+    @media (max-width: 960px) {
+      height: 358px;
+    }
+      @media (max-width: 600px) {
+        height: 400px;
+      }
+      @media (max-width: 285px) {
+        height: 450px;
+      }
   }
   img {
     margin-top: 10px;
     width: 450px;
     height: auto;
+    @media (max-width: 1100px) {
+      position: absolute;
+      right: 80px;
+      margin-top: 40px;
+    }
+    @media (max-width: 960px) {
+      right: 80px;
+      margin-top: 90px;
+      width: 350px;
+      z-index: 1;
+    }
+    @media (max-width: 600px) {
+      margin-top: 130px;
+      right: 20px;  
+    }
+    @media (max-width: 400px) {
+      display: none;
+    } 
   }
 `;
 
@@ -32,12 +65,24 @@ const Text = styled.div`
   align-items: start;
   justify-content: start;
   gap: 16px;
+  z-index: 2;
+  @media (max-width: 600px) {
+    padding: 40px 20px;
+  }
+    @media (max-width: 330px) {
+      padding: 20px;
+    }
   h2 {
     font-weight: 700;
     font-size: 32px;
     line-height: 42px;
     letter-spacing: -0.25px;
     color: #ffffff;
+
+    @media (max-width: 600px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
   p {
     font-weight: 400;
@@ -45,6 +90,11 @@ const Text = styled.div`
     line-height: 27px;
     letter-spacing: -0.25px;
     color: #d6d6d6;
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
   label {
     width: 100%;
@@ -53,6 +103,10 @@ const Text = styled.div`
     align-items: start;
     justify-content: start;
     gap: 8px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
     input {
       width: 70%;
       padding: 12px 34px 12px 16px;
@@ -64,6 +118,9 @@ const Text = styled.div`
       line-height: 22px;
       letter-spacing: 0px;
       color: #ffffff;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
 
       &:focus {
         border: 1px solid #0070f4;
@@ -79,6 +136,10 @@ const Text = styled.div`
       line-height: 24px;
       color: #ffffff;
       box-shadow: 0px 10px 15px -3px #19202c29;
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
   span {
@@ -99,6 +160,7 @@ const Cricle = styled.div`
   height: 80px;
   border-radius: 50%;
   background: linear-gradient(180deg, #ffffff 0%, #eaeaea 77.4%, #dfdfdf 100%);
+  z-index: -1;
 `;
 const Modal = styled.div`
   position: fixed;
