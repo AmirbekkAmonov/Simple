@@ -46,6 +46,15 @@ const Button = styled.button`
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+        @media (max-width: 350px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
     &:hover { 
         background-color: ${(props) => (props.$rang ? "#EFEFEF" : "#191919ef")};
         color: ${(props) => (props.$rang ? "#191919" : "#EFEFEF")};
