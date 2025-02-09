@@ -8,13 +8,14 @@ import Business from "./components/sections/Business/Business"
 import Footer from "./components/Footer/Footer"
 import SignIn from './components/Header/SignIn/SignIn';
 import SignUp from './components/Header/SignUp/SingUp';
+import BackToTop from './components/sections/BackToTop/BackToTop';
 function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             <>
               <Hero />
@@ -23,8 +24,9 @@ function App() {
               <World />
               <Business />
               <Footer />
+              <BackToTop />
             </>
-          } 
+          }
         />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
