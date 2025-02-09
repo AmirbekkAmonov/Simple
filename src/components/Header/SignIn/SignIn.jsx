@@ -218,7 +218,7 @@ function SignIn() {
           <Input type="password" id="password" placeholder="Enter your password" required />
         </Div>
         <Check>
-          <input type="checkbox" name="remember" id="check" required />
+          <input type="checkbox" name="remember" id="check"/>
           <label htmlFor="check">Remember this device</label>
         </Check>
         <Button type="submit">Sign In</Button>
